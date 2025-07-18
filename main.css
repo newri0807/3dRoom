@@ -1,0 +1,118 @@
+  body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: transparent;
+        }
+        
+        #container {
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .ui-controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        
+        .control-btn {
+            background: rgba(0,0,0,0.7);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .control-btn:hover {
+            background: rgba(0,0,0,0.9);
+        }
+
+        .info-panel {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            max-width: 300px;
+        }
+
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            z-index: 200;
+        }
+
+        /* 변경: 컨트롤 가이드 추가 */
+        .control-guide {
+            position: absolute;
+            top: 150px;
+            left: 20px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 100;
+        }            
+        #modeToggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 18px;
+            font-size: 14px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+/* 다크 모드 */
+body.dark-mode .ui-controls,
+body.dark-mode .control-guide,
+body.dark-mode .info-panel {
+    background: rgba(0, 0, 0, 0.7); 
+     border-radius: 4px;
+    color: white;
+}
+
+body:not(.dark-mode) .ui-controls,
+body:not(.dark-mode) .control-guide,
+body:not(.dark-mode) .info-panel {
+    background: rgba(255, 255, 255, 0.8); 
+     border-radius: 4px;
+    color: #222; /* 변경: 진한 텍스트 */
+}
+
+body:not(.dark-mode) .control-btn {
+    background: rgba(240, 240, 240, 0.8);
+    color: #222;
+}
+
+body:not(.dark-mode) .control-btn:hover {
+    background: rgba(220, 220, 220, 1);
+}
+
+body.dark-mode #modeToggle {
+  background: #222;
+  color: white;
+}
+
+body:not(.dark-mode) #modeToggle {
+  background: #f0f0f0;
+  color: #222;
+}

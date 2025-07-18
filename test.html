@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D 방 인테리어 - 디테일 업그레이드</title>
+   <link href="/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container"></div>
+    
+    <div id="loading" class="loading">
+        🏠 3D 방 인테리어 로딩 중...
+    </div>
+    
+    <div class="ui-controls" style="display: none;" id="controls">
+        <button class="control-btn" onclick="resetCamera()">카메라 리셋</button>
+        <button class="control-btn" onclick="toggleAutoRotate()">자동 회전</button>
+        <button class="control-btn" onclick="toggleAnimations()">애니메이션</button>
+    </div>
+
+    <!-- 변경: 컨트롤 가이드 추가 -->
+    <div class="control-guide" style="display: none;" id="guide">
+        🖱️ 드래그: 회전<br>
+        🖱️ 휠: 줌<br>
+        ⌨️ WASD: 이동
+    </div>
+    
+    <div class="info-panel" style="display: none;" id="info">
+        <h3>🏠 아늑한 방 인테리어</h3>
+        <p>🐱 고양이가 소파에서 쉬고 있어요</p>
+        <p>🦋 나비들이 꽃 주변을 날아다녀요</p>
+        <p>🌸 예쁜 꽃들이 방을 장식해요</p>
+    </div>
+
+
+    <button id="modeToggle">🌙 다크 모드</button>
+
+
+    <script src="https://unpkg.com/three@0.154.0/build/three.min.js"></script>
+    <script src="./3dRoom.js"></script>
+
+
+    
+    
+</body>
+</html>
